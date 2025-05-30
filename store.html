@@ -1,170 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>TheFuturix Store</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>TheFuturix Store</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      overflow-x: hidden;
-    }
+      body,
+      html {
+        height: 100%;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        overflow-x: hidden;
+      }
 
-    .store-hero {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-    }
+      .store-hero {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+      }
 
-    .bg-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 0.6;
-      filter: brightness(0.8) saturate(1.2);
-    }
+      .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.6;
+        filter: brightness(0.8) saturate(1.2);
+      }
 
-    .store-content {
-      position: relative;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      backdrop-filter: blur(2px);
-    }
+      .store-content {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        backdrop-filter: blur(2px);
+      }
 
-    .store-content h1 {
-      font-size: 3rem;
-      background: linear-gradient(90deg, #00f0ff, #7a00ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-    }
+      .store-content h1 {
+        font-size: 3rem;
+        background: linear-gradient(90deg, #00f0ff, #7a00ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+      }
 
-    .store-content p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #e0e0e0;
-    }
+      .store-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #e0e0e0;
+      }
 
-    .buy-button {
-      padding: 14px 30px;
-      background: linear-gradient(90deg, #ff0055, #ff0022);
-      border: none;
-      border-radius: 30px;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 0 20px rgba(255, 0, 85, 0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+      .buy-button {
+        padding: 14px 30px;
+        background: linear-gradient(90deg, #ff0055, #ff0022);
+        border: none;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 0 20px rgba(255, 0, 85, 0.6);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-    .buy-button:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 35px rgba(255, 0, 85, 0.9);
-    }
+      .buy-button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 35px rgba(255, 0, 85, 0.9);
+      }
 
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #0a0a0a;
+        color: white;
+      }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a0a0a;
-  color: white;
-}
+      .main-header {
+        background: linear-gradient(90deg, #0f0f0f, #1f1f1f);
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 0 20px #00f0ff;
+      }
 
-.main-header {
-  background: linear-gradient(90deg, #0f0f0f, #1f1f1f);
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 0 20px #00f0ff;
-}
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #00f0ff;
+        letter-spacing: 2px;
+      }
 
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #00f0ff;
-  letter-spacing: 2px;
-}
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s ease, transform 0.2s;
+      }
 
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s;
-}
+      .navbar a:hover {
+        color: #00f0ff;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">TheFuturix</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="futurix2.html">About</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="loyalty.html">Loyalty</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="store-hero">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="3163534-uhd_3840_2160_30fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-.navbar a:hover {
-  color: #00f0ff;
-  transform: scale(1.1);
-}
-
-
-
-
-  </style>
-</head>
-<body>
-
-
-
-  <header class="main-header">
-  <div class="logo">TheFuturix</div>
-  <nav class="navbar">
-    <ul>
-      <li><a href="futurix.html">Home</a></li>
-      <li><a href="futurix2.html">About</a></li>
-      <li><a href="store.html">Store</a></li>
-      <li><a href="loyalty.html">Loyalty</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-  <section class="store-hero">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="3163534-uhd_3840_2160_30fps.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    
-    <div class="store-content">
-      <h1>Welcome to TheFuturix Store</h1>
-      <p>Unlock premium digital products built for the creators of tomorrow.</p>
-      <button class="buy-button" onclick="window.open('https://thefuturix.gumroad.com/?_gl=1*130dh74*_ga*MTI3MjY3ODE1NS4xNzM1MTAwNDk2*_ga_6LJN6D94N6*czE3NDg1MTU5NjEkbzIwNiRnMCR0MTc0ODUxNTk2MSRqNjAkbDAkaDA.')">
-        🚀 Shop on Gumroad
-      </button>
-    </div>
-  </section>
- <footer>
-    &copy; 2025 TheFuturix. All rights reserved.
-  </footer>
-
-</body>
+      <div class="store-content">
+        <h1>Welcome to TheFuturix Store</h1>
+        <p>
+          Unlock premium digital products built for the creators of tomorrow.
+        </p>
+        <button
+          class="buy-button"
+          onclick="window.open('https://thefuturix.gumroad.com/?_gl=1*130dh74*_ga*MTI3MjY3ODE1NS4xNzM1MTAwNDk2*_ga_6LJN6D94N6*czE3NDg1MTU5NjEkbzIwNiRnMCR0MTc0ODUxNTk2MSRqNjAkbDAkaDA.')"
+        >
+          🚀 Shop on Gumroad
+        </button>
+      </div>
+    </section>
+    <footer>&copy; 2025 TheFuturix. All rights reserved.</footer>
+  </body>
 </html>
